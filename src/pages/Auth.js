@@ -71,8 +71,7 @@ class AuthPage extends Component {
 
     console.log(process.env);
     fetch(
-      (process.env.API_URL ? process.env.API_URL : "http://localhost:8000") +
-        "/graphql",
+        "https://kaido-event-api.rahulkum.com/graphql",
       {
         method: "POST",
         body: JSON.stringify(requestBody),

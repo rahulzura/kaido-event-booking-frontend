@@ -203,18 +203,14 @@ class EventsPage extends Component {
       }
     };
 
-    fetch(
-      (process.env.API_URL ? process.env.API_URL : "http://localhost:8000") +
-        "/graphql",
-      {
-        method: "POST",
-        body: JSON.stringify(requestBody),
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + this.context.token
-        }
+    fetch("https://kaido-event-api.rahulkum.com/graphql", {
+      method: "POST",
+      body: JSON.stringify(requestBody),
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + this.context.token
       }
-    )
+    })
       .then(res => {
         if (res.status !== 200 && res.status !== 201) {
           throw new Error("Failed!");
