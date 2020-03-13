@@ -70,16 +70,13 @@ class AuthPage extends Component {
     }
 
     console.log(process.env);
-    fetch(
-        "https://kaido-event-api.rahulkum.com/graphql",
-      {
-        method: "POST",
-        body: JSON.stringify(requestBody),
-        headers: {
-          "Content-Type": "application/json"
-        }
+    fetch("http://localhost:7000/graphql", {
+      method: "POST",
+      body: JSON.stringify(requestBody),
+      headers: {
+        "Content-Type": "application/json"
       }
-    )
+    })
       .then(res => {
         if (res.status !== 200 && res.status !== 201) {
           throw new Error("Failed!");

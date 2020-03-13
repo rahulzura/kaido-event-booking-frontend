@@ -45,5 +45,5 @@ code {
 .btn:hover,
 .btn:active {
   background: rgb(40, 80, 160);
-  border: rgb(40, 80, 160);
+  border: 1px solid rgb(40, 80, 160);
 }
