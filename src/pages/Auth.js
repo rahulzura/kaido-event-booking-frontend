@@ -69,6 +69,7 @@ class AuthPage extends Component {
       };
     }
 
+    console.log(process.env.API_URL);
     fetch(
       (process.env.API_URL ? process.env.API_URL : "http://localhost:8000") +
         "/graphql",
